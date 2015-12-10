@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    tools:context="br.senac.pi.controlenota.PesquisarActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/relatorio_por" />
+
+    <Button
+        android:id="@+id/btnRelatorioPorInstituicao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instituicao" />
+
+    <Button
+        android:id="@+id/btnRelatorioPorTurma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/turma" />
+
+    <Button
+        android:id="@+id/btnRelatorioPorAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aluno" />
+
+    <Button
+        android:id="@+id/btnRelatorioPorSituacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/situacao" />
+
+</LinearLayout>

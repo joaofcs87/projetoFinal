@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.senac.pi.controlenota" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CadastrarActivity" >
+        </activity>
+        <activity android:name=".PesquisarActivity" >
+        </activity>
+        <activity android:name=".LancaNotasActivity" >
+        </activity>
+        <activity android:name=".CadastraInstituicaoActivity" >
+        </activity>
+        <activity android:name=".CadastraTurmaActivity" >
+        </activity>
+        <activity android:name=".CadastraAlunoActivity" >
+        </activity>
+        <activity android:name=".RelatorioInstituicaoActivity" >
+        </activity>
+        <activity android:name=".RelatorioTurmaActivity" >
+        </activity>
+        <activity android:name=".RelatorioAlunoActivity" >
+        </activity>
+        <activity android:name=".RelatorioSituacaoActivity" >
+        </activity>
+        <activity android:name=".ListaInstituicaoActivity" >
+        </activity>
+    </application>
+
+</manifest>

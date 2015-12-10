@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Controle Notas</string>
+
+    <!-- Controle Notas -->
+    <string name="listar">Listar Cadastros</string>
+    <string name="visualizar">Visualizar Registros</string>
+    <string name="id">ID</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="relatorios">Relatórios</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="lancar_nota">Lançar notas</string>
+    <string name="instituicao">Instituição</string>
+    <string name="turma">Turma</string>
+    <string name="aluno">Aluno</string>
+    <string name="matricula">Matrícula</string>
+    <string name="salvar">Salvar</string>
+    <string name="primeira_nota">1ª nota</string>
+    <string name="segunda_nota">2ª nota</string>
+    <string name="terceira_nota">3ª nota</string>
+    <string name="situacao">Situação</string>
+    <string name="relatorio_por">Relatório por:</string>
+    <string name="cad_sucesso">Cadastro realizado!</string>
+    <string name="sem_registros">Sem registros a serem exibidos</string>
+    <string name="cad_erro">Erro na tentativa de cadastro!</string>
+
+</resources>
