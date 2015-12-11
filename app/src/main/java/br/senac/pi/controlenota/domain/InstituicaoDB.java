@@ -1,9 +1,13 @@
 package br.senac.pi.controlenota.domain;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Aluno on 09/12/2015.
@@ -31,5 +35,40 @@ public class InstituicaoDB extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    //joaoCod
+    public List<Instituicao> selectInstituicoes(){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+
+            //select * from instituicoes
+            Cursor cursor = db.query("instituicoes", null, null, null, null, null, null, null);
+            return toList(cursor);
+
+        }finally {
+
+            db.close();
+
+        }
+    }
+
+    //joaoCod
+
+    public List<Instituicao> toList (Cursor cursor){
+
+        List<Instituicao> instituicoes = new ArrayList<Instituicao>();
+        if(cursor.moveToFirst()){
+            do{
+                Instituicao instituicao = new Instituicao();
+                instituicoes.add(instituicao);
+                //recupera os atributos de instituicao
+                instituicao.setId(cursor.getLong(cursor.getColumnIndex("id_instituicao")));
+                instituicao.setInstituicao(cursor.getString(cursor.getColumnIndex("instituicao")));
+
+            } while(cursor.moveToNext());
+
+        }
+        return instituicoes;
     }
 }
