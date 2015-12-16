@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class InstituicaoDB extends SQLiteOpenHelper {
     private static final String TAG = "sql";
-    private static final String NOME_BANCO = "controlenotas.sqlite";
-    private static final int VERSAO_BANCO = 1;
+    private static final String NOME_BANCO = "controlenotas1.sqlite";
+    private static final int VERSAO_BANCO = 2;
 
     public InstituicaoDB (Context context){
 
@@ -26,7 +26,7 @@ public class InstituicaoDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         Log.d(TAG, "Criando a tabela 'instituicoes'");
         db.execSQL("create table if not exists instituicoes(" +
-                "id_instituicao integer primary key autoincrement," +
+                "_id integer primary key autoincrement," +
                 "instituicao text unique" +
                 ")");
         Log.d(TAG, "Tabela criada com sucesso!");
@@ -34,7 +34,7 @@ public class InstituicaoDB extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        //db.execSQL("ALTER TABLE instituicoes CHANGE id_instituicao _id integer primary key autoincrement");
     }
 
     //joaoCod

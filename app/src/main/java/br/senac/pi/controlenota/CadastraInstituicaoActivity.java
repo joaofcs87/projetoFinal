@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import br.senac.pi.controlenota.domain.InstituicaoDB;
 
+
 public class CadastraInstituicaoActivity extends AppCompatActivity {
     //joaoCod
     private SQLiteDatabase db;
@@ -22,6 +23,7 @@ public class CadastraInstituicaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastra_instituicao);
 
         instituicaoDB = new InstituicaoDB(this);
+
         //joaoCod
         findViewById(R.id.btnCadInstituicao).setOnClickListener(cadastrarInstituicao());
         findViewById(R.id.btnListaInstituicao).setOnClickListener(intentListarInstituicao());

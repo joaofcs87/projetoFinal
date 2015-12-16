@@ -10,8 +10,8 @@ import android.util.Log;
  */
 public class TurmaDB extends SQLiteOpenHelper {
     private static final String TAG = "sql";
-    private static final String NOME_BANCO = "controlenotas.sqlite";
-    private static final int VERSAO_BANCO = 1;
+    private static final String NOME_BANCO = "controlenotas1.sqlite";
+    private static final int VERSAO_BANCO = 2;
 
     public TurmaDB (Context context){
         super(context,NOME_BANCO, null, VERSAO_BANCO);
@@ -20,10 +20,10 @@ public class TurmaDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         Log.d(TAG, "Criando a tabela 'turmas'");
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS turmas(" +
-                "id_turma integer primary key autoincrement," +
+                "_id integer primary key autoincrement," +
                 "id_instituicao integer not null," +
                 "turma text not null," +
-                "FOREIGN KEY(id_instituicao) REFERENCES instituicoes(id_instituicao)" +
+                "FOREIGN KEY(id_instituicao) REFERENCES instituicoes(_id)" +
                 ")");
         Log.d(TAG, "Tabela criada com sucesso!");
     }
