@@ -16,20 +16,17 @@
         android:text="@string/cadastrar"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnCadastrarInstituicao"
         android:text="@string/instituicao"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnCadastrarTurma"
         android:text="@string/turma"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnCadastrarAluno"
         android:text="@string/aluno"/>
 

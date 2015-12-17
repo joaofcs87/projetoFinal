@@ -10,12 +10,12 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import br.senac.pi.controlenota.domain.InstituicaoDB;
+import br.senac.pi.controlenota.domain.ConexaoDB;
 
 public class ListaInstituicaoActivity extends AppCompatActivity {
 
     //joaoCod
-    private InstituicaoDB instituicaoDB;
+    private ConexaoDB conexaoDB;
     private SQLiteDatabase db;
     private CursorAdapter dataSource;
     private ListView listView;
@@ -26,8 +26,8 @@ public class ListaInstituicaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_instituicao);
         //joaoCod
-        instituicaoDB = new InstituicaoDB(this);
-        db = instituicaoDB.getWritableDatabase();
+        conexaoDB = new ConexaoDB(this);
+        db = conexaoDB.getWritableDatabase();
         findViewById(R.id.btnVisualizarInstituicao).setOnClickListener(listarInstituicao());
         listView = (ListView) findViewById(R.id.listViewInstituicao);
     }

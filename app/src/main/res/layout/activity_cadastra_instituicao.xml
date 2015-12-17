@@ -18,13 +18,11 @@
         android:id="@+id/edtInstituicao"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnCadInstituicao"
         android:text="@string/cadastrar"/>
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnListaInstituicao"
         android:text="@string/listar"/>
 

@@ -9,20 +9,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.senac.pi.controlenota.domain.InstituicaoDB;
+import br.senac.pi.controlenota.domain.ConexaoDB;
 
 
 public class CadastraInstituicaoActivity extends AppCompatActivity {
     //joaoCod
     private SQLiteDatabase db;
-    private InstituicaoDB instituicaoDB;
+    private ConexaoDB conexaoDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_instituicao);
 
-        instituicaoDB = new InstituicaoDB(this);
+        conexaoDB = new ConexaoDB(this);
 
         //joaoCod
         findViewById(R.id.btnCadInstituicao).setOnClickListener(cadastrarInstituicao());
@@ -34,7 +34,7 @@ public class CadastraInstituicaoActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db = instituicaoDB.getWritableDatabase();
+                db = conexaoDB.getWritableDatabase();
                 ContentValues valores = new ContentValues();
                 EditText edtInstituicao = (EditText) findViewById(R.id.edtInstituicao);
                 valores.put("instituicao", edtInstituicao.getText().toString());

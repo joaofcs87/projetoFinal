@@ -15,26 +15,23 @@
 
     <Button
         android:id="@+id/btnRelatorioPorInstituicao"
-        android:layout_width="match_parent"
+        style="@style/BtnStyle"
         android:layout_height="wrap_content"
         android:text="@string/instituicao" />
 
     <Button
         android:id="@+id/btnRelatorioPorTurma"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:text="@string/turma" />
 
     <Button
         android:id="@+id/btnRelatorioPorAluno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:text="@string/aluno" />
 
     <Button
         android:id="@+id/btnRelatorioPorSituacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:text="@string/situacao" />
 
 </LinearLayout>

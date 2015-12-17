@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -14,17 +13,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import br.senac.pi.controlenota.domain.Instituicao;
-import br.senac.pi.controlenota.domain.InstituicaoDB;
-import br.senac.pi.controlenota.domain.TurmaDB;
+import br.senac.pi.controlenota.domain.ConexaoDB;
 
 public class CadastraTurmaActivity extends AppCompatActivity {
     //joaoCod
     private SQLiteDatabase database, dbTurma;
-    private InstituicaoDB instituicaoDB;
-    private TurmaDB turmaDB;
+    private ConexaoDB conexaoDB;
     private Spinner spinnerInstituicao;
     private String[] campos = {"instituicao"};
     private String[] id_instituicao = {"_id"};
@@ -38,9 +33,8 @@ public class CadastraTurmaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastra_turma);
 
         //joaoCod
-        instituicaoDB = new InstituicaoDB(this);
-        turmaDB = new TurmaDB(this);
-        database = instituicaoDB.getReadableDatabase();
+        conexaoDB = new ConexaoDB(this);
+        database = conexaoDB.getReadableDatabase();
         Cursor cursorInstituicao = database.query("instituicoes", campos, null, null, null, null, "instituicao");
         cursorInstituicao.moveToFirst();
 
@@ -77,7 +71,7 @@ public class CadastraTurmaActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbTurma = turmaDB.getWritableDatabase();
+                dbTurma = conexaoDB.getWritableDatabase();
                 ContentValues valores = new ContentValues();
                 Cursor cursorIdInstituicaoSelecionada = database.query("instituicoes", id_instituicao, "instituicao = '" + instituicaoSelecionada + "'", null, null, null, null);
                 cursorIdInstituicaoSelecionada.moveToFirst();
@@ -89,6 +83,8 @@ public class CadastraTurmaActivity extends AppCompatActivity {
                 long inserir = dbTurma.insert("turmas", null, valores);
                 if (inserir != 0) {
                     Toast.makeText(getApplicationContext(), getString(R.string.cad_sucesso), Toast.LENGTH_LONG).show();
+                    edtTurma.setText("");
+                    edtTurma.requestFocus();
 
                 } else {
                     Toast.makeText(getApplicationContext(), getString(R.string.cad_erro), Toast.LENGTH_LONG).show();

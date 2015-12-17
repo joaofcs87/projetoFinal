@@ -8,20 +8,17 @@
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnCadastrar"
         android:text="@string/cadastrar"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnPesquisar"
         android:text="@string/relatorios"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnLancarNotas"
         android:text="@string/lancar_nota"/>
 </LinearLayout>

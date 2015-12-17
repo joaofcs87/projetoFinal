@@ -9,8 +9,7 @@
     tools:context="br.senac.pi.controlenota.ListaInstituicaoActivity">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:text="@string/visualizar"
         android:id="@+id/btnVisualizarInstituicao"/>
 

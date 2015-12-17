@@ -6,23 +6,6 @@
     android:orientation="vertical"
     tools:context="br.senac.pi.controlenotas.LancaNotaActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/instituicao"/>
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerInstituicao"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/turma"/>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerTurna"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -67,8 +50,7 @@
         android:id="@+id/edtTerceiraNota"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/BtnStyle"
         android:id="@+id/btnLancaNota"
         android:text="@string/salvar"/>
 
